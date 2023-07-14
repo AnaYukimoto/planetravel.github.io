@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pacotes</title>
+  <link rel="shortcut icon" href="img/logo.png">
+  <link rel="stylesheet" href="css/pacotes.css">
+  <script src="js/compras.js"></script>
+  <script src="https://kit.fontawesome.com/0df5057ab7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <!--COMEÇO DA NAV-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/logo.png" width="50px" height="50px" alt="">
+    </a>
+    <a class="navbar-brand" href="index.html" style="font-family:fantasy; font-size: 23px;">Plane Travel</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+      aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link active" href="pacotes.html">Pacotes<span class="sr-only">(página atual)</span></a>
+        </li>
+        <li class="nav-item disabled">
+          <a class="nav-link disabled">Pagamento</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link active" href="index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+        </li>
+      </ul>
+
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+      </form>
+    </div>
+  </nav>
+  <!--FINAL DA NAV-->
+
+  <div id="message"></div><!--ALERT DE compras.js-->
+
+  <!--COMEÇO DOS PACOTES-->
+  <br> <br>
+  <div class="container">
+    <form action="compras.php" method="get" name="form2" id="form2">
+      <div class="card-deck">
+        <div class="card text-white bg-danger mb-3" style="width: 18rem;" >
+          <img class="card-img-top" src="img/vaigem_aruda.jpg" alt="Imagem de capa do card" height="190%">
+          <div class="card-body">
+            <h5 class="card-title">Aruba - Venezuela</h5>
+            <p class="card-text" style="text-align: justify;">A pequena ilha, localizada ao norte da Venezuela, é um
+              lugar perfeito para passar as férias de janeiro. Com um voo mais rápido dura 9h e possui 1 parada Com
+              praias serenas e hotéis com uma bela vista para o mar, Aruba é muito animada durante o dia e à noite, com
+              atrações que agradam todos os tipos de viajantes. <br><br> <strong>Pacote de 7 dias por pessoa:</strong>
+            </p>
+
+            <label for="valor">Valor em R$:</label>
+            <input type="number" name="valor1" id="valor1" value="6500" readonly> <br>
+
+            <label for="quantidade">Quantidade de Pessoas:</label>
+            <input type="number" name="qtde1" id="qtde1" value="0" min="0"> <br> <br>
+
+            <input type="button" value="Comprar Pacote" name="comprar" onclick="compras()" id="comprar"
+              class="btn btn-primary">
+
+          </div>
+        </div>
+        <div class="card text-white bg-success mb-3" style="width: 18rem;">
+          <img class="card-img-top" src="img/viagem_toquio.jpg" alt="Imagem de capa do card">
+          <div class="card-body">
+            <h5 class="card-title">Tóquio - Japão</h5>
+            <p class="card-text" style="text-align: justify;">A capital do Japão reúne a um só tempo modernidade e
+              tradição. Uma das maiores metrópoles do planeta, Tóquio tem altos arranha-céus e um povo educado e
+              simpático. Ao lado de áreas cercadas por painéis de neon e um metrô limpo e eficiente, estão parques
+              arborizados onde ficam delicadas cerejeiras. <br><br> <strong>Pacote de 7 dias por pessoa:</strong></p>
+
+            <label for="valor">Valor em R$:</label>
+            <input type="number" name="valor2" id="valor2" value="9400" readonly> <br>
+
+            <label for="quantidade">Quantidade de Pessoas:</label>
+            <input type="number" name="qtde2" id="qtde2" value="0" min="0"> <br> <br>
+
+            <input type="button" value="Comprar Pacote" name="comprar" onclick="compras()" id="comprar"
+              class="btn btn-primary">
+          </div>
+        </div>
+        <div class="card text-white bg-warning mb-3" style="width: 18rem;">
+          <img class="card-img-top" src="img/viagem_antartica.jpg" alt="Imagem de capa do card">
+          <div class="card-body">
+            <h5 class="card-title">Antártica - Pólo Norte</h5>
+            <p class="card-text" style="text-align: justify;">A Antártica é o mais ermo dos continentes, mas não fica
+              tão longe como parece: leva-se um dia e meio para ir do Ushuaia, no extremo sul da América do Sul, à área
+              do Tratado Antártico (acordo de proteção ambiental que delimita a Antártica). Ao contrário do Ártico, há
+              terra sob o gelo da Antártica. <br><br> <strong>Pacote de 7 dias por pessoa:</strong></p>
+
+            <label for="valor">Valor em R$:</label>
+            <input type="number" name="valor3" id="valor3" value="8200" readonly> <br>
+
+            <label for="quantidade">Quantidade de Pessoas:</label>
+            <input type="number" name="qtde3" id="qtde3" value="0" min="0"> <br> <br>
+
+            <input type="button" value="Comprar Pacote" name="comprar" onclick="compras()" id="comprar"
+              class="btn btn-primary">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!--FINAL DOS PACOTES-->
+
+</body>
+</html>
